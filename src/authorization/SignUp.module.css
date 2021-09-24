@@ -13,8 +13,9 @@
     border-left: none;
     height: auto;
     width: 50%;
-    background-color:whitesmoke;
+    background-color:rgba(221,219,186,255);
     opacity: 0.9;
+    border-radius: 20px;
 }
 
 input[type=text], input[type=password], input[type=email] {
@@ -49,4 +50,8 @@ button:hover {
 
 label{
     color:green;
+}
+
+.invalid {
+    color: #b40e0e;
 }

@@ -7,14 +7,16 @@
 .tabcontent {
     /* float: right; */
     padding: 0px 12px;
+    /* margin-top: 10px; */
     border: 1px solid #ccc;
-    margin-left: 300px;
+    margin-left: 270px;
     margin-right: 100px;
     border-left: none;
     height: auto;
     width: 50%;
-    background-color:whitesmoke;
+    background-color:rgba(221,219,186,255);
     opacity: 0.9;
+    border-radius: 20px;
 }
 
 input[type=text], input[type=password], input[type=email] {

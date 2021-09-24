@@ -5,8 +5,9 @@
 body {
   font-family: sans-serif;
   margin: 0;
-  /* background-color:rgb(228, 204, 204); */
-  background-image: url(./assets/back.jpg);
+  /* background-color:rgb(228, 204, 204);  */
+  background-image: url(./assets/back7.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.9;
 }

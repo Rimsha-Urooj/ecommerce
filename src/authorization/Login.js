@@ -1,8 +1,9 @@
-
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import avatar from '../assets/img_avatar2.png'
 import classes from './Login.module.css';
+import { login } from '../services/auth';
+
 
 const initialState = {
     email: '',
@@ -50,7 +51,13 @@ export class Login extends Component {
             console.log(this.state);
             // clear Form 
             this.setState(initialState);
-            // this.props.history.push('/home');
+            var isLogin = login(this.state.email, this.state.password);
+            console.log("after function calling");
+            console.log(isLogin);
+            if (isLogin){
+                alert("Login Successfully");
+                this.props.history.push('/product');
+            }
         }
         
     };
@@ -95,4 +102,4 @@ export class Login extends Component {
     };
 };
 
-export default Login;
+export default withRouter(Login);
