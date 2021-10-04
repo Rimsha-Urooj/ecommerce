@@ -28,7 +28,7 @@ input[type=text], input[type=password], input[type=email] {
 }
 
 /* Set a style for all buttons */
-button {
+.button {
     background-color: #04AA6D;
     color: white;
     padding: 14px 20px;
@@ -48,7 +48,7 @@ button:hover {
     opacity: 0.8;
 }
 
-label{
+.label{
     color:green;
 }
 

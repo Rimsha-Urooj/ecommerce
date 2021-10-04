@@ -1,6 +1,7 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import {products} from '../../services/products';
+import Layout from '../Layout/Layout';
 import classes from './ProductDetail.module.css';
 
 function ProductDetail() {
@@ -12,7 +13,7 @@ function ProductDetail() {
     // }
 
     return (
-        <Fragment>
+        <Layout>
             <div className={classes.details}>
                 <h2 className={classes.head}>Product Detail Page</h2>
                 <div>
@@ -34,12 +35,12 @@ function ProductDetail() {
                         <div className={classes.pieces} style={{backgroundColor:'green'}}>
                             <p>Discount: {product.discount}</p>
                         </div>
-                        <button type='button'>Buy Now</button>
+                        <button className={classes.button} type='button'>Buy Now</button>
                     </div>
                 </div>
             </div>
 
-        </Fragment>
+        </Layout>
     );
 };
 

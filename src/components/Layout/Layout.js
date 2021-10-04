@@ -6,7 +6,7 @@ import classes from './Layout.module.css';
 function Layout(props) {
     return (
         <Fragment>
-            <MainNavigation />
+            <MainNavigation onShowCart ={props.onShowCart} />
             <main className={classes.main}>
                 {props.children}
             </main>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import classes from './Welcome.module.css';
+import Layout from '../Layout/Layout';
 
 
 function Welcome() {
@@ -9,7 +10,7 @@ function Welcome() {
         history.push('/login');
     }
     return (
-        <div>
+        <Layout>
             <div className={classes.welcome}>
                 <h1>Hoşgeldiniz</h1>
                 <p>An eShop or electronic store is “the place” where a company can sell their products or services 
@@ -24,7 +25,7 @@ function Welcome() {
                 </p>
             </div>
             <button className={classes.zoom} onClick={buttonClickHandler} >Get Started.</button>
-        </div>
+        </Layout>
        
     );
 };

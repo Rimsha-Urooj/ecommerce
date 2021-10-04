@@ -1,16 +1,45 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {products} from '../../services/products';
+import AuthContext from '../../store/AuthContext';
+
 import classes from './Product.module.css';
+import Cart from '../Cart/Cart';
+import Layout from '../Layout/Layout';
+import ProductItem from './ProductItem';
+
 
 
 export class Product extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+            cartShown: false,
+        }
+    }
+
+    showCartHandler = () => {
+        this.setState({cartShown: true});
+    }
+
+    hideCartHandler = () =>{
+        this.setState({cartShown: false});
+    }
+
     render() {
+        const {username, isAuthenticated} = this.context;
+       
         return (
-            <React.Fragment>
+            <Layout onShowCart={this.showCartHandler.bind(this)}>
                 {/* <!-- Side Bar --> */}
+                {(isAuthenticated && this.state.cartShown) && 
+                    <Cart
+                        onClose = {this.hideCartHandler.bind(this)}
+                    />
+                }
                 <div className={classes.sidebar}>
-                    <h2 className={classes.heading}>Hey User Hoşgeldiniz</h2>
+                    <h2 className={classes.heading}>Hey {username}</h2>
                     <Link className={classes.link} path="/">Featured</Link>
                     <Link className={classes.link} path="/">Discounts</Link>
                     <Link className={classes.link} path="/"> Sale</Link>
@@ -22,23 +51,22 @@ export class Product extends Component {
                     <div className={classes.title}><h2>Handy Craft </h2></div>
                     
                     <div className={classes['flex-container']}>
-                        {products.map((product)=>
-                            <Link className={classes.style} to={`/product/${product.id}`} key={product.id} >
-                                <div className={classes.sec}>
-                                    <img className={classes.imgsetting} src={product.image} alt='scarf pic'></img>
-                                    <p className={classes.paragraph}>{product.name}</p>
-                                    <h3>Price {product.price}</h3>
-                                    <button type='button'>Add to Cart</button>
-                                    
-
-                                </div>
-                            </Link>
-                        )}
+                        {products.map((product)=>(
+                            <ProductItem 
+                                id={product.id}
+                                key={product.id}
+                                name={product.name}
+                                price={product.price}
+                                image={product.image}
+                            />
+                        ))}
                     </div>
+    
                 </div>
-            </React.Fragment>
+            </Layout>
         );
     };
 };
+Product.contextType=AuthContext;
 
 export default Product;

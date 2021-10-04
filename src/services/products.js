@@ -2,7 +2,7 @@ export const products = [
     {
         'id' : 'p1',
         'name' : 'Colored Shawl',
-        'price' : '$1200',
+        'price' : '1200',
         'description': '100% Pure cotton',
         'code': 'SKU : 29764 P (C-5)',
         'quantity': '5',
@@ -15,7 +15,7 @@ export const products = [
     {
         'id' : 'p2',
         'name' : 'Russian Kerchief',
-        'price' : '$2200',
+        'price' : '2200',
         'description': 'Warm cotton',
         'code': 'SKU : 29764 P (C-33)',
         'quantity': '2',
@@ -28,7 +28,7 @@ export const products = [
     {
         'id' : 'p3',
         'name' : 'Handmade Woolen Stripe',
-        'price' : '$3500',
+        'price' : '3500',
         'description': 'Pure Cotton',
         'code': 'SKU : 29734 P (C-5)',
         'quantity': '1',
@@ -41,7 +41,7 @@ export const products = [
     {
         'id' : 'p4',
         'name' : 'Handmade Shawl',
-        'price' : '$500',
+        'price' : '500',
         'description': 'woolen shawl for winters',
         'code': 'SMF : 29764 P (C-5)',
         'quantity': '2',
@@ -54,7 +54,7 @@ export const products = [
     {
         'id' : 'p5',
         'name' : 'Cashmere Silk Scarf',
-        'price' : '$2500',
+        'price' : '2500',
         'description': 'silk stuff',
         'code': 'AJK : 29764 P (C-5)',
         'quantity': '2',
@@ -67,7 +67,7 @@ export const products = [
     {
         'id' : 'p6',
         'name' : 'Kashmiri Shawl',
-        'price' : '$300',
+        'price' : '300',
         'description': 'Made up of pure cotton',
         'code': 'AMK : 29764 P (C-5)',
         'quantity': '3',
@@ -80,7 +80,7 @@ export const products = [
     {
         'id' : 'p7',
         'name' : 'Woolen Handmade Shawl',
-        'price' : '$800',
+        'price' : '800',
         'description': 'Pure wool',
         'code': 'SKU : 29764 P (C-5)',
         'quantity': '5',
@@ -93,7 +93,7 @@ export const products = [
     {
         'id' : 'p8',
         'name' : 'Oriental Rugs',
-        'price' : '$1500',
+        'price' : '1500',
         'description': 'leather shoes',
         'code': 'SKU : 29764 P (C-5)',
         'quantity': '5',
